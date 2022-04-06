@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let maca = parseInt(prompt('Quantas maças você deseja?: '))
+        let resultado = 3.50 * maca
+        let resultado2 = 2.50 * maca
+
+
+        if(maca <= 6 && maca >= 1){
+            window.alert('O resultado da compra foi de: R$' + resultado + '')
+        }else if(maca >=7 && maca <= 12){
+            window.alert('O resultado da compra foi de: R$' + resultado2 + ',00')
+        }
+    </script>
+</body>
+</html>

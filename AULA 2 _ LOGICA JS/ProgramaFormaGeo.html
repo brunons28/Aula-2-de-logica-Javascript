@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("Informe a quantidade de lados e descubra a forma geometrica")
+
+let forma = parseInt(prompt("Informe a quantidade de lados"))
+
+if(forma<3){
+    alert("Não é um poligono")
+} else if(forma == 3){
+    alert("Você digitou três lados, a forma é um triangulo!")
+    let baseTriangulo = parseFloat(prompt("Nos informe a base em metros do seu triangulo"))
+    let alturaTriangulo = parseFloat(prompt("Nos informe a altura em metros do seu triangulo"))
+    let AreaTriangulo = ((baseTriangulo * alturaTriangulo) / 2)
+    let Tco = (baseTriangulo * baseTriangulo)
+    let Tca = (alturaTriangulo * alturaTriangulo)
+    let hip2 = Tco + Tca
+    let hip = Math.sqrt(hip2)
+    let areatotalTriangulo = baseTriangulo + alturaTriangulo + hip 
+
+    document.write("Você escolheu três lados, a forma geometrica é um triangulo <br>" )
+    document.write("Você escolheu o tamanho de sua base é de: " + baseTriangulo + "m<br>")
+    document.write("Você escolheu o tamanho de sua altura é de: " + alturaTriangulo + "m<br>")
+    document.write("Você escolheu o tamanho de sua hipotenusa é de: " + hip + "m<br>")
+    document.write("E o perimetro total do seu triangulo é de: " + areatotalTriangulo + "m<br>" )
+    document.write("E a area total do seu triangulo é de: " + AreaTriangulo + "m²<br>" )
+
+} else if(forma == 4){
+    alert("Você digitou quatro lados, no caso, um quadrado!")
+    let ladoQuadrado = parseFloat(prompt("Nos informe um lado em metros do seu quadrado"))
+    let AreaQuadrado = (ladoQuadrado * ladoQuadrado)
+    let perimetroQuadrado = (ladoQuadrado*4)
+    document.write("Você escolheu quatro lados, e isso forma um quadrado <br>" )
+    document.write("Você escolheu o tamanho de um lado de: " + ladoQuadrado + "m<br>")
+    document.write("E o perimetro total do seu quadrado é de: " + perimetroQuadrado + "m²<br>" )
+    document.write("E a area total do seu quadrado é de: " + AreaQuadrado + "m²<br>" )
+
+} else if(forma == 5){
+    alert("Você digitou 5 lados, no caso, um pentagono!")
+    let lado1 = parseFloat(prompt("Nos informe o tamanho de um lado do seu pentagono em metros"))
+    let co = (lado1 / 2)
+    let apotema = (co / 0.726)
+    let semiperimetro = ((5 * lado1) / 2)
+    let areaPen = (semiperimetro * apotema)
+    document.write("Você escolheu cinco lados, no caso, um pentagono! <br>")
+    document.write("Você escolheu o tamanho de um lado de: " + lado1 + "m<br>")
+    document.write("Os resultados foram: <br>")
+    document.write("apotema: " + apotema + "m <br>")
+    document.write("semi-perimetro: " + semiperimetro + "m <br>")
+    document.write("area: " + areaPen + "m²<br>")
+    
+} else if(forma>5){
+    alert("Poligono  não identificado")
+}
+
+    </script>
+</body>
+</html>

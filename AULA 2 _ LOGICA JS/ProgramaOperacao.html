@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        var num1 = parseInt(prompt("Entre com o primeiro número: "))
+        var num2 = parseInt(prompt("Entre com o segundo número: "))
+        let operacao = prompt("1-Adição, 2-Subtração, 3-Multiplicação, 4-Divisão")
+        let soma = (num1 + num2)
+        let sub = (num1 - num2)
+        let multi = (num1 * num2)
+        let div = (num1 / num2)
+
+
+        switch (operacao){
+        case"1":
+        window.alert(num1+ " + "+num2+ " = "+ soma)
+        break
+
+        case"2":
+        window.alert(num1+ " - "+num2+ " = "+ sub)
+        break
+
+        case"3":
+        window.alert(num1+ " X "+num2+ " = "+ multi)
+        break
+
+        case"4":
+        window.alert(num1+ " / "+num2+ " = "+ div)
+        break
+
+        default:
+            document.write("Operação inválida")
+        }
+    </script>
+</body>
+</html>
